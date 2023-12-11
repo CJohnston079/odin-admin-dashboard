@@ -1,0 +1,45 @@
+* {
+    /* outline: solid 1px hsl(0, 0%, 90%); */
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr 3fr;
+    background-color: hsl(0, 0%, 95%);
+}
+
+.sidebar {
+    display: grid;
+    gap: 12px;
+    background-color: black;
+    border-radius: 8px;
+    height: 98vh;
+}
+
+.sidebar a {
+    color: white;
+    background-color: blue;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+}
+
+.dashboard-header {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
