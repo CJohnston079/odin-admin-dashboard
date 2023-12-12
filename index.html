@@ -1,141 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <nav class="sidebar">
-        <div>
-            <img class="logo" src="">
-            <img class="nav-icon hamburger" src="">
-        </div>
-        <hr>
-        <a class="nav-link" href="">
-            <img class="nav-icon" src="./icons/home.svg">
-            <span class="nav-text">Home</span>
-        </a>
-        <a class="nav-link" href="">
-            <img class="nav-icon" src="./icons/profile.svg">
-            <span class="nav-text">Profile</span>
-        </a>
-        <a class="nav-link" href="">
-            <img class="nav-icon" src="./icons/messages.svg">
-            <span class="nav-text">Messages</span>
-        </a>
-        <a class="nav-link" href="">
-            <img class="nav-icon" src="./icons/history.svg">
-            <span class="nav-text">History</span>
-        </a>
-        <a class="nav-link" href="">
-            <img class="nav-icon" src="./icons/list.svg">
-            <span class="nav-text">Tasks</span>
-        </a>
-        <a class="nav-link" href="">
-            <img class="nav-icon" src="./icons/calendar.svg">
-            <span class="nav-text">Calendar</span>
-        </a>
-        <a class="nav-link" href="">
-            <img class="nav-icon" src="./icons/analytics.svg">
-            <span class="nav-text">Analytics</span>
-        </a>
-        <hr>
-        <a class="nav-link" href="">
-            <img class="nav-icon" src="./icons/settings.svg">
-            <span class="nav-text">Settings</span>
-        </a>
-        <a class="nav-link" href="">
-            <img class="nav-icon" src="./icons/support.svg">
-            <span class="nav-text">Support</span>
-        </a>
-        <a class="nav-link" href="">
-            <img class="nav-icon" src="./icons/privacy.svg">
-            <span class="nav-text">Privacy</span>
-        </a>
-    </nav>
-    <main>
-        <div class="dashboard-header">
-            <div class="user-profile">
-                <span>Welcome back,</span>
-                <h1>Friedrich Burgmüller</h1>
-                <a href="">Account settings</a>
-            </div>
-            <div class="search">
-                <input type="text" placeholder="Search...">
-                <button type="button" class="header-button">
-                    <img src="" alt="">
-                </button>
-            </div>
-            <button type="button" id="notifications" class="header-button">
-                <img src="" alt="">
-            </button>
-        </div>
-        <section class="card">
-            <div class="card-header">
-                <h3 class="card-title">Card title</h3>
-                <img src="" alt="" class="card-icon favourite">
-                <img src="" alt="" class="card-icon share">
-                <img src="" alt="" class="card-icon watch">
-            </div>
-        </section>
-        <section class="card">
-            <div class="card-header">
-                <h3 class="card-title">Card title</h3>
-                <img src="" alt="" class="card-icon favourite">
-                <img src="" alt="" class="card-icon share">
-                <img src="" alt="" class="card-icon watch">
-            </div>
-        </section>
-        <section class="card">
-            <div class="card-header">
-                <h3 class="card-title">Card title</h3>
-                <img src="" alt="" class="card-icon favourite">
-                <img src="" alt="" class="card-icon share">
-                <img src="" alt="" class="card-icon watch">
-            </div>
-        </section>
-        <section class="card">
-            <div class="card-header">
-                <h3 class="card-title">Card title</h3>
-                <img src="" alt="" class="card-icon favourite">
-                <img src="" alt="" class="card-icon share">
-                <img src="" alt="" class="card-icon watch">
-            </div>
-        </section>
-        <section class="card">
-            <div class="card-header">
-                <h3 class="card-title">Card title</h3>
-                <img src="" alt="" class="card-icon favourite">
-                <img src="" alt="" class="card-icon share">
-                <img src="" alt="" class="card-icon watch">
-            </div>
-        </section>
-        <section class="card">
-            <div class="card-header">
-                <h3 class="card-title">Card title</h3>
-                <img src="" alt="" class="card-icon favourite">
-                <img src="" alt="" class="card-icon share">
-                <img src="" alt="" class="card-icon watch">
-            </div>
-        </section>
-        <section class="card">
-            <div class="card-header">
-                <h3 class="card-title">Card title</h3>
-                <img src="" alt="" class="card-icon favourite">
-                <img src="" alt="" class="card-icon share">
-                <img src="" alt="" class="card-icon watch">
-            </div>
-        </section>
-        <section class="card">
-            <div class="card-header">
-                <h3 class="card-title">Card title</h3>
-                <img src="" alt="" class="card-icon favourite">
-                <img src="" alt="" class="card-icon share">
-                <img src="" alt="" class="card-icon watch">
-            </div>
-        </section>
-    </main>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Admin Dashboard</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<nav class="sidebar">
+			<div class="sidebar-header">
+				<img class="logo" src="./icons/logo.svg" />
+                <h2>Dashboard</h2>
+				<img class="nav-icon hamburger" src="" />
+			</div>
+			<div class="spacer"></div>
+			<a class="nav-link nav-active" href="">
+				<img class="nav-icon" src="./icons/home.svg" />
+				<span class="nav-text">Home</span>
+			</a>
+			<a class="nav-link" href="">
+				<img class="nav-icon" src="./icons/profile.svg" />
+				<span class="nav-text">Profile</span>
+			</a>
+			<a class="nav-link" href="">
+				<img class="nav-icon" src="./icons/messages.svg" />
+				<span class="nav-text">Messages</span>
+			</a>
+			<a class="nav-link" href="">
+				<img class="nav-icon" src="./icons/history.svg" />
+				<span class="nav-text">History</span>
+			</a>
+			<a class="nav-link" href="">
+				<img class="nav-icon" src="./icons/list.svg" />
+				<span class="nav-text">Tasks</span>
+			</a>
+			<a class="nav-link" href="">
+				<img class="nav-icon" src="./icons/calendar.svg" />
+				<span class="nav-text">Calendar</span>
+			</a>
+			<a class="nav-link" href="">
+				<img class="nav-icon" src="./icons/analytics.svg" />
+				<span class="nav-text">Analytics</span>
+			</a>
+			<div class="spacer"></div>
+			<a class="nav-link" href="">
+				<img class="nav-icon" src="./icons/settings.svg" />
+				<span class="nav-text">Settings</span>
+			</a>
+			<a class="nav-link" href="">
+				<img class="nav-icon" src="./icons/support.svg" />
+				<span class="nav-text">Support</span>
+			</a>
+			<a class="nav-link" href="">
+				<img class="nav-icon" src="./icons/privacy.svg" />
+				<span class="nav-text">Privacy</span>
+			</a>
+		</nav>
+		<main>
+			<div class="dashboard-header">
+				<div class="user-profile">
+					<span>Welcome back,</span>
+					<h1>Friedrich Burgmüller</h1>
+					<a href="">Account settings</a>
+				</div>
+				<div class="search">
+					<input type="text" placeholder="Search..." />
+					<button type="button" class="header-button">
+						<img src="" alt="" />
+					</button>
+				</div>
+				<button type="button" id="notifications" class="header-button">
+					<img src="" alt="" />
+				</button>
+			</div>
+			<section class="card">
+				<div class="card-header">
+					<h3 class="card-title">Card title</h3>
+					<img src="" alt="" class="card-icon favourite" />
+					<img src="" alt="" class="card-icon share" />
+					<img src="" alt="" class="card-icon watch" />
+				</div>
+			</section>
+			<section class="card">
+				<div class="card-header">
+					<h3 class="card-title">Card title</h3>
+					<img src="" alt="" class="card-icon favourite" />
+					<img src="" alt="" class="card-icon share" />
+					<img src="" alt="" class="card-icon watch" />
+				</div>
+			</section>
+			<section class="card">
+				<div class="card-header">
+					<h3 class="card-title">Card title</h3>
+					<img src="" alt="" class="card-icon favourite" />
+					<img src="" alt="" class="card-icon share" />
+					<img src="" alt="" class="card-icon watch" />
+				</div>
+			</section>
+			<section class="card">
+				<div class="card-header">
+					<h3 class="card-title">Card title</h3>
+					<img src="" alt="" class="card-icon favourite" />
+					<img src="" alt="" class="card-icon share" />
+					<img src="" alt="" class="card-icon watch" />
+				</div>
+			</section>
+			<section class="card">
+				<div class="card-header">
+					<h3 class="card-title">Card title</h3>
+					<img src="" alt="" class="card-icon favourite" />
+					<img src="" alt="" class="card-icon share" />
+					<img src="" alt="" class="card-icon watch" />
+				</div>
+			</section>
+			<section class="card">
+				<div class="card-header">
+					<h3 class="card-title">Card title</h3>
+					<img src="" alt="" class="card-icon favourite" />
+					<img src="" alt="" class="card-icon share" />
+					<img src="" alt="" class="card-icon watch" />
+				</div>
+			</section>
+			<section class="card">
+				<div class="card-header">
+					<h3 class="card-title">Card title</h3>
+					<img src="" alt="" class="card-icon favourite" />
+					<img src="" alt="" class="card-icon share" />
+					<img src="" alt="" class="card-icon watch" />
+				</div>
+			</section>
+			<section class="card">
+				<div class="card-header">
+					<h3 class="card-title">Card title</h3>
+					<img src="" alt="" class="card-icon favourite" />
+					<img src="" alt="" class="card-icon share" />
+					<img src="" alt="" class="card-icon watch" />
+				</div>
+			</section>
+			<section class="card">
+				<div class="card-header">
+					<h3 class="card-title">Card title</h3>
+					<img src="" alt="" class="card-icon favourite" />
+					<img src="" alt="" class="card-icon share" />
+					<img src="" alt="" class="card-icon watch" />
+				</div>
+			</section>
+			<section class="card">
+				<div class="card-header">
+					<h3 class="card-title">Card title</h3>
+					<img src="" alt="" class="card-icon favourite" />
+					<img src="" alt="" class="card-icon share" />
+					<img src="" alt="" class="card-icon watch" />
+				</div>
+			</section>
+			<section class="card">
+				<div class="card-header">
+					<h3 class="card-title">Card title</h3>
+					<img src="" alt="" class="card-icon favourite" />
+					<img src="" alt="" class="card-icon share" />
+					<img src="" alt="" class="card-icon watch" />
+				</div>
+			</section>
+			<section class="card">
+				<div class="card-header">
+					<h3 class="card-title">Card title</h3>
+					<img src="" alt="" class="card-icon favourite" />
+					<img src="" alt="" class="card-icon share" />
+					<img src="" alt="" class="card-icon watch" />
+				</div>
+			</section>
+		</main>
+	</body>
 </html>
