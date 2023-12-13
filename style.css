@@ -17,8 +17,8 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
-	padding: 0;
 	border: 0;
+	padding: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -52,20 +52,15 @@ body {
     grid-template-columns: minmax(16rem, 1fr) 4fr;
     gap: 1rem;
     margin: min(1rem, 2%);
+
     font-family: 'Rubik', sans-serif;
+
     background-color: hsl(0, 0%, 95%);
 }
 
 a {
     text-decoration: none;
     color: black;
-}
-
-main {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 16px;
 }
 
 .spacer {
@@ -76,19 +71,26 @@ main {
     position: sticky;
     top: 1rem;
     overflow: scroll;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: minmax(4.5rem, 12%) 1fr 30%;
+
     border-radius: 8px;
     padding: 1rem;
     height: calc(96vh - 2rem);
+
     background: hsl(175, 72%, 35%);
-    background: linear-gradient(to top, hsl(175, 72%, 35%), hsl(165, 72%, 41%));
+    background: linear-gradient(to top, hsl(175, 75%, 35%), hsl(165, 75%, 40%));
 }
 
 .sidebar-header {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    margin: 0.5rem 0.5rem 0.5rem 0;
+    margin: 0.5rem;
 }
 
 .sidebar-header * {
@@ -103,6 +105,7 @@ main {
     font-size: 2rem;
     font-weight: 500;
     letter-spacing: -0.1rem;
+
     color: white;
 }
 
@@ -110,40 +113,67 @@ main {
     display: flex;
     align-items: center;
     gap: max(1rem, 10%);
-    margin: 0.5rem 0.5rem 0.5rem 0;
-    border-radius: 12px;
+    
+    margin: 0.5rem 0;
+    border: solid 1.5px transparent;
+    border-radius: 16px;
     padding: 0.5rem;
+
     font-size: 0.8rem;
     font-weight: 400;
     letter-spacing: 0.05rem;
+
     color: white;
-    transition: background-color 600ms;
+
+    transition: border-color 600ms;
+
+    cursor: pointer;
+    user-select: none;
 }
 
 .nav-active,
-.nav-link:hover {
+.nav-link:active {
     background-color: hsl(0, 0%, 100%);
-    transition: background-color 200ms;
 }
 
 .nav-active *,
-.nav-link:hover * {
+.nav-link:active * {
     filter: invert(100%);
+}
+
+.nav-link:hover {
+    border: solid 1.5px white;
+    transition: border-color 200ms;
 }
 
 .nav-icon {
     width: 3ch;
 }
 
+#nav-help {
+    align-self: flex-end;
+}
+
+main {
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.0rem;
+}
+
 .card {
     border-radius: 8px;
     padding: 1rem;
+    min-height: 12rem;
+    min-width: 16rem;
+
     background-color: white;
-    min-height: 20rem;
 }
 
 .dashboard-header {
     grid-column: 1 / -1;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
