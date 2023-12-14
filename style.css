@@ -51,7 +51,7 @@ body {
     display: grid;
     grid-template-columns: minmax(16rem, 1fr) 4fr;
     gap: 2rem;
-    margin: min(1rem, 2%);
+    margin: 2rem 1rem;
 
     font-family: 'Rubik', sans-serif;
 
@@ -69,7 +69,7 @@ a {
 
 .sidebar {
     position: sticky;
-    top: 1rem;
+    top: 2rem;
     overflow: scroll;
 
     display: grid;
@@ -78,7 +78,7 @@ a {
 
     border-radius: 8px;
     padding: 1rem;
-    height: calc(96vh - 2rem);
+    height: calc(96vh - 4rem);
 
     background: hsl(175, 72%, 35%);
     background: linear-gradient(to top, hsl(175, 75%, 35%), hsl(165, 75%, 40%));
@@ -116,7 +116,7 @@ a {
     
     margin: 0.5rem 0;
     border: solid 1.5px transparent;
-    border-radius: 16px;
+    border-radius: 1rem;
     padding: 0.5rem;
 
     font-size: 0.8rem;
@@ -175,10 +175,9 @@ main {
     grid-column: 1 / -1;
 
     display: grid;
-    grid-template-columns: 6rem  repeat(3, auto);
-    align-items: center;
+    grid-template-columns: 6rem  repeat(2, auto) 2.5rem;
+    align-items: flex-end;
     gap: 1rem;
-    margin: 1rem 0rem;
 }
 
 #profile-photo {
@@ -190,6 +189,7 @@ main {
     font-size: 1rem;
     font-weight: 300;
     text-transform: uppercase;
+
     color: gray;
 }
 
@@ -202,4 +202,37 @@ main {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+}
+
+.search {
+    display: grid;
+    grid-template-columns: auto 2.5rem;
+}
+
+.search > input {
+    border: none;
+    border-radius: 1rem 0 0 1rem;
+    padding: 1rem;
+    height: 0.5rem;
+}
+
+.search .header-button {
+    border-radius: 0 1rem 1rem 0;
+}
+
+.search > input::placeholder {
+    letter-spacing: 0.02rem;
+    color: hsl(0, 0%, 60%);
+}
+
+.header-button {
+    display: flex;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    background-color: white;
+    
+    cursor: pointer;
 }
