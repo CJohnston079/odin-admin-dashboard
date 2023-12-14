@@ -50,7 +50,7 @@ table {
 body {
     display: grid;
     grid-template-columns: minmax(16rem, 1fr) 4fr;
-    gap: 1rem;
+    gap: 2rem;
     margin: min(1rem, 2%);
 
     font-family: 'Rubik', sans-serif;
@@ -175,5 +175,31 @@ main {
     grid-column: 1 / -1;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 6rem  repeat(3, auto);
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0rem;
+}
+
+#profile-photo {
+    border-radius: 100%;
+    width: 6rem;
+}
+
+.dashboard-header span {
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: gray;
+}
+
+.dashboard-header h1 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
