@@ -276,11 +276,44 @@ main h3 {
 
 #info p {
     font-size: 0.8rem;
-    line-height: 1.2;
     color: hsl(0, 0%, 40%);
+}
+
+#news p {
+    line-height: 1.2;
+}
+
+#trending {
+    position: sticky;
+    top: 2rem;
+}
+
+#trending p {
+    margin: 0.5rem auto;
 }
 
 #info hr {
     margin: 1rem auto;
     border: solid hsl(0, 0%, 90%) 0.5px;
+}
+
+.trending-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1rem;
+
+    margin: 1rem auto;
+
+    cursor: pointer;
+}
+
+.trending-photo {
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+}
+
+#trending .trending-project {
+    color: black;
 }
