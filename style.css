@@ -19,8 +19,8 @@ time, mark, audio, video {
 	margin: 0;
 	border: 0;
 	padding: 0;
-	font-size: 100%;
-	font: inherit;
+	/* font-size: 100%; */
+	/* font: inherit; */
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -51,7 +51,7 @@ body {
     display: grid;
     grid-template-columns: minmax(16rem, 1fr) 4fr;
     gap: 2rem;
-    margin: 2rem 1rem;
+    margin: 2rem;
 
     font-family: 'Rubik', sans-serif;
 
@@ -73,7 +73,7 @@ a {
     overflow: scroll;
 
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
     grid-template-rows: minmax(4.5rem, 12%) 1fr 30%;
 
     border-radius: 8px;
@@ -155,23 +155,12 @@ a {
 }
 
 main {
-    flex: 1;
-
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-    gap: 1.0rem;
+    grid-template-columns: 4fr 1fr;
+    gap: 2rem;
 }
 
-.card {
-    border-radius: 8px;
-    padding: 1rem;
-    min-height: 12rem;
-    min-width: 16rem;
-
-    background-color: white;
-}
-
-.dashboard-header {
+#dashboard-header {
     grid-column: 1 / -1;
 
     display: grid;
@@ -185,7 +174,7 @@ main {
     width: 6rem;
 }
 
-.dashboard-header span {
+#dashboard-header span {
     font-size: 1rem;
     font-weight: 300;
     text-transform: uppercase;
@@ -193,7 +182,7 @@ main {
     color: gray;
 }
 
-.dashboard-header h1 {
+#dashboard-header h1 {
     font-size: 2rem;
     font-weight: 400;
 }
@@ -209,6 +198,15 @@ main {
     grid-template-columns: auto 2.5rem;
 }
 
+.search .header-button {
+    border-radius: 0 1rem 1rem 0;
+}
+
+.search .header-button img {
+    opacity: 0.4;
+    transition: opacity 500ms;
+}
+
 .search > input {
     border: none;
     border-radius: 1rem 0 0 1rem;
@@ -216,8 +214,13 @@ main {
     height: 0.5rem;
 }
 
-.search .header-button {
-    border-radius: 0 1rem 1rem 0;
+.search > input:focus-visible {
+    outline: none;
+}
+
+.search .header-button img:hover,
+.search input:focus + .header-button img {
+    opacity: 1;
 }
 
 .search > input::placeholder {
@@ -235,4 +238,49 @@ main {
     background-color: white;
     
     cursor: pointer;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    border-radius: 8px;
+    padding: 1rem;
+    min-height: 12rem;
+    min-width: 16rem;
+    max-height: fit-content;
+
+    background-color: white;
+}
+
+main h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+#info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#info h4 {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+#info p {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    color: hsl(0, 0%, 40%);
+}
+
+#info hr {
+    margin: 1rem auto;
+    border: solid hsl(0, 0%, 90%) 0.5px;
 }
