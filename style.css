@@ -328,20 +328,26 @@ main {
 }
 
 .card-title {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1.5rem 1fr 1.5rem;
     align-items: center;
+    align-content: center;
+    gap: 0.5rem;
 }
 
 .card-title img {
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+.card-title .icon-drag {
     width: 1.2rem;
     height: 1.2rem;
     cursor: grab;
 }
 
-.card-title img:active {
-    width: 1.2rem;
-    height: 1.2rem;
+.icon-drag:active {
     cursor: grabbing;
 }
 
