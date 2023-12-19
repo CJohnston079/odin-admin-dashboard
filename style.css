@@ -310,12 +310,21 @@ main {
     gap: 2rem;
 }
 
+#cards .card {
+    transition: box-shadow 200ms;
+}
+
+#cards .card:hover {
+    box-shadow: 0 0 8px hsl(0, 0%, 90%), 0 0 4px hsl(0, 0%, 70%);
+}
+
 .card {
     border-radius: 8px;
     padding: 1rem;
     min-height: 12rem;
 
     background-color: white;
+    box-shadow: 0 0 8px hsl(0, 0%, 90%);
 }
 
 .card-title {
@@ -327,6 +336,13 @@ main {
 .card-title img {
     width: 1.2rem;
     height: 1.2rem;
+    cursor: grab;
+}
+
+.card-title img:active {
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: grabbing;
 }
 
 .card p {
