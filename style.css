@@ -80,7 +80,7 @@ a {
     padding: 1rem;
     height: calc(96vh - 4rem);
 
-    background: hsl(175, 72%, 35%);
+    background: hsl(175, 75%, 35%);
     background: linear-gradient(to top, hsl(175, 75%, 35%), hsl(165, 75%, 40%));
 }
 
@@ -318,6 +318,27 @@ main {
     background-color: white;
 }
 
+.card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-title img {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.card p {
+    font-size: 0.8rem;
+    color: hsl(0, 0%, 40%);
+    line-height: 1.2;
+}
+
+#performance {
+    grid-column: 1 / -1;
+}
+
 main h3 {
     margin-bottom: 1rem;
     
@@ -355,7 +376,7 @@ main h3 {
     margin: 0.5rem auto;
 }
 
-#info hr {
+hr {
     margin: 1rem auto;
     border: solid hsl(0, 0%, 90%) 0.5px;
 }
