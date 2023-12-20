@@ -334,7 +334,7 @@ main {
 }
 
 #cards .card:hover {
-    box-shadow: 0 0 8px hsl(0, 0%, 90%), 0 0 4px hsl(0, 0%, 70%);
+    box-shadow: 0 0 8px hsl(0, 0%, 90%), 0 0 4px hsl(0, 0%, 50%);
 }
 
 .card {
@@ -363,6 +363,12 @@ main {
     width: 1.2rem;
     height: 1.2rem;
     cursor: grab;
+}
+
+.card-controls {
+    display: flex;
+    justify-content: center;
+    margin-right: 1rem;
 }
 
 .icon-drag:active {
