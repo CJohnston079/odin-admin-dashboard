@@ -345,7 +345,7 @@ main {
     box-shadow: 0 0 8px hsl(0, 0%, 90%);
 }
 
-.card-title {
+.card-header {
     display: grid;
     grid-template-columns: 1.5rem 1fr 1.5rem;
     align-items: center;
@@ -353,13 +353,13 @@ main {
     gap: 0.5rem;
 }
 
-.card-title img {
+.card-header img {
     width: 1.5rem;
     height: 1.5rem;
     cursor: pointer;
 }
 
-.card-title .icon-drag {
+.card-header .icon-drag {
     width: 1.2rem;
     height: 1.2rem;
     cursor: grab;
