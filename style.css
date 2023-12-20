@@ -484,6 +484,7 @@ hr {
 
     main {
         margin: 1rem;
+        margin-bottom: 6rem;
     }
 
     .sidebar {
@@ -524,5 +525,26 @@ hr {
 
     section {
         margin: 2rem 0;
+    }
+
+    #mobile-footer {
+        position: fixed;
+        bottom: 0;
+
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+
+        margin-bottom: 0;
+        padding: 1rem 0;
+        border-top: solid 1px hsl(0, 0%, 95%);
+        width: 100%;
+
+        background-color: white;
+    }
+
+    #mobile-footer img {
+        height: 1.5rem;
+        width: 1.5rem;
     }
 } 
