@@ -509,4 +509,20 @@ hr {
     .hamburger {
         position: absolute;
     }
+
+    #user-profile {
+        align-items: center;
+    }
+
+    #tools {
+        display: none;
+    }
+
+    #performance {
+        display: none !important;
+    }
+
+    section {
+        margin: 2rem 0;
+    }
 } 
