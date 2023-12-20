@@ -109,6 +109,10 @@ a {
     color: white;
 }
 
+.hamburger {
+    display: none;
+}
+
 .nav-link {
     display: flex;
     align-items: center;
@@ -459,3 +463,50 @@ hr {
 #trending .trending-project {
     color: black;
 }
+
+@media only screen and (max-width: 600px) {
+    body,
+    main,
+    .hamburger,
+    #dashboard-header {
+        display: block;
+    }
+
+    #nav-links,
+    #nav-help,
+    #info {
+        display: none;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    main {
+        margin: 1rem;
+    }
+
+    .sidebar {
+        overflow: hidden;
+        position: static;
+        border-radius: 0;
+        height: auto;
+    }
+
+    .sidebar-header {
+        position: relative;
+    }
+    
+    .sidebar-header h2 {
+        font-size: 2rem;
+    }
+
+    .sidebar-header .logo {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .hamburger {
+        position: absolute;
+    }
+} 
