@@ -464,17 +464,95 @@ hr {
     color: black;
 }
 
+@media only screen and (max-width: 900px) {
+    body {
+        grid-template-columns: 4rem auto;
+    }
+
+    .sidebar {
+        justify-items: center;
+        padding: 0 0 2rem 0;
+    }
+
+    .sidebar-header {
+        justify-items: center;
+        grid-template-columns: auto;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .logo {
+        display: none;
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .nav-text {
+        display: none;
+    }
+
+    .sidebar-header h2 {
+        display: none;
+    }
+
+    #performance {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    main {
+        display: block;
+    }
+
+    section {
+        margin: 2rem 0;
+    }
+
+    .sidebar {
+        padding: 0;
+        height: calc(96vh - 5rem);
+    }
+
+    #info {
+        display: none;
+    }
+    
+    #mobile-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+
+        margin-bottom: 0;
+        padding: 1rem 0;
+        border-top: solid 1px hsl(0, 0%, 95%);
+        width: 100%;
+
+        background-color: white;
+        animation: grow 500ms;
+    }
+
+    #mobile-footer img {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     body,
     main,
-    .hamburger,
     #dashboard-header {
         display: block;
     }
 
     #nav-links,
-    #nav-help,
-    #info {
+    #nav-help {
         display: none;
     }
 
@@ -493,12 +571,9 @@ hr {
         border-radius: 0;
         height: auto;
     }
-
-    .sidebar-header {
-        position: relative;
-    }
     
     .sidebar-header h2 {
+        display: block;
         font-size: 2rem;
     }
 
@@ -509,6 +584,7 @@ hr {
 
     .hamburger {
         position: absolute;
+        left: 1rem;
     }
 
     #user-profile {
@@ -518,33 +594,13 @@ hr {
     #tools {
         display: none;
     }
+}
 
-    #performance {
-        display: none !important;
+@keyframes grow {
+    0% {
+        transform: translateY(4rem);
     }
-
-    section {
-        margin: 2rem 0;
+    100% {
+        transform: translateY(0rem);
     }
-
-    #mobile-footer {
-        position: fixed;
-        bottom: 0;
-
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        justify-items: center;
-
-        margin-bottom: 0;
-        padding: 1rem 0;
-        border-top: solid 1px hsl(0, 0%, 95%);
-        width: 100%;
-
-        background-color: white;
-    }
-
-    #mobile-footer img {
-        height: 1.5rem;
-        width: 1.5rem;
-    }
-} 
+}
