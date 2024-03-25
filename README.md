@@ -1,4 +1,4 @@
-# The Odin Project | Sign-Up Form
+# The Odin Project | Admin Dashboard
 
 https://cjohnston079.github.io/odin-admin-dashboard/
 
